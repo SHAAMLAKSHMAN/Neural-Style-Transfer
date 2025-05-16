@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body { font-family: Arial; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .image-container { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        .image-box { flex: 1; min-width: 300px; text-align: center; }
+        img { max-width: 100%; height: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <h1>Style Transfer Result</h1>
+    <p>Processing time: {{ time }} seconds</p>
+    
+    <div class="image-container">
+        <div class="image-box">
+            <h3>Original</h3>
+            <img src="{{ url_for('uploaded_file', filename='content.jpg') }}">
+        </div>
+        
+        <div class="image-box">
+            <h3>Style</h3>
+            <img src="{{ url_for('uploaded_file', filename='style.jpg') }}">
+        </div>
+        
+        <div class="image-box">
+            <h3>Result</h3>
+            <img src="{{ url_for('result_file', filename='result.jpg') }}">
+        </div>
+    </div>
+    
+    <a href="/" style="display: inline-block; margin-top: 20px;">← Try Another Image</a>
+</body>
+</html>

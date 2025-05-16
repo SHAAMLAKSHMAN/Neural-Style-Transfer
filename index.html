@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Transfer</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .upload-box { border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0; }
+        button { background: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Neural Style Transfer</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="upload-box">
+            <h3>Content Image</h3>
+            <input type="file" name="content" accept="image/*" required>
+        </div>
+        
+        <div class="upload-box">
+            <h3>Style Image</h3>
+            <input type="file" name="style" accept="image/*" required>
+        </div>
+        
+        <button type="submit">Style My Image</button>
+    </form>
+</body>
+</html>
